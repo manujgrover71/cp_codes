@@ -6,6 +6,16 @@
 using namespace std;
 #define ll long long
 
+bool checkVal(map< int, pair<int, int> >m){
+
+    for(auto i: m){
+        if(i.second.second != -1)
+            return true;
+    }
+
+    return false;
+}
+
 void solve(){
     int n; cin >> n;
     int changes = 0;
@@ -29,7 +39,7 @@ void solve(){
         }
     }
 
-    if(changes == m.size()){
+    if(!checkVal(m)){
         cout << 0 << "\n";
         return;
     }
