@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF77263640": {
+    "contest_id": 746,
+    "language": "GNU C++17",
+    "path": "codeforces\\746\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Decoding",
+    "problem_url": "https://codeforces.com/contest/746/problem/B",
+    "submission_id": "CF77263640",
+    "submission_url": "https://codeforces.com/contest/746/submission/77263640",
+    "tags": [
+      "implementation",
+      "strings",
+      "*900"
+    ],
+    "timestamp": "Apr/19/2020 15:51"
+  },
   "CF77276977": {
     "contest_id": 719,
     "language": "GNU C++17",
