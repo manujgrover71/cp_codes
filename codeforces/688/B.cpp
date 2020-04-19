@@ -20,11 +20,11 @@ int main(){
     cin.tie(NULL);
     
     string s; cin >> s;
-    char x[2 * s.length() + 1];
     for(int i = 0; i < s.length(); i++){
-        x[i] = x[2 * s.length()-1-i] = s[i];
+        cout << s[i];
     }
-    x[2*s.length()] = '\0';
-    cout << x;
+    for(int i = s.length() - 1; i > -1; i--){
+        cout << s[i];
+    }
     
 }   
