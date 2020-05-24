@@ -561,6 +561,23 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF81115159": {
+    "contest_id": 239,
+    "language": "GNU C++14",
+    "path": "codeforces\\239\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Two Bags of Potatoes",
+    "problem_url": "https://codeforces.com/contest/239/problem/A",
+    "submission_id": "CF81115159",
+    "submission_url": "https://codeforces.com/contest/239/submission/81115159",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "May/24/2020 12:27"
+  },
   "CF81352058": {
     "contest_id": 1360,
     "language": "GNU C++14",
