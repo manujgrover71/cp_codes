@@ -8,6 +8,10 @@
 using namespace std;
 #define ll long long
 
+bool sortinrev(pair<int, int> &a, pair<int, int> &b){
+    return (a.first > b.first);
+}
+
 void solve(){
     int n, m, a, b;
     cin >> n >> m >> a >> b;
@@ -34,7 +38,7 @@ void solve(){
                     arr[i][freq[j].second] = '0';
                 }
             }
-            sort(freq.rbegin(), freq.rend());
+            sort(freq.begin(), freq.end(), sortinrev);
         }
 
         for(int i = 0; i < n; i++){
