@@ -561,6 +561,23 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF82023291": {
+    "contest_id": 1291,
+    "language": "GNU C++14",
+    "path": "codeforces\\1291\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Even But Not Even",
+    "problem_url": "https://codeforces.com/contest/1291/problem/A",
+    "submission_id": "CF82023291",
+    "submission_url": "https://codeforces.com/contest/1291/submission/82023291",
+    "tags": [
+      "greedy",
+      "math",
+      "strings",
+      "*900"
+    ],
+    "timestamp": "May/31/2020 14:00"
+  },
   "CF82024856": {
     "contest_id": 1291,
     "language": "GNU C++14",
