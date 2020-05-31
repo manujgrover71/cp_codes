@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF82034743": {
+    "contest_id": 544,
+    "language": "GNU C++14",
+    "path": "codeforces\\544\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Sea and Islands",
+    "problem_url": "https://codeforces.com/contest/544/problem/B",
+    "submission_id": "CF82034743",
+    "submission_url": "https://codeforces.com/contest/544/submission/82034743",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "May/31/2020 16:51"
+  },
   "CF82036815": {
     "contest_id": 580,
     "language": "GNU C++14",
