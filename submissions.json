@@ -561,6 +561,21 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF82770842": {
+    "contest_id": 478,
+    "language": "GNU C++14",
+    "path": "codeforces\\478\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Table Decorations",
+    "problem_url": "https://codeforces.com/contest/478/problem/C",
+    "submission_id": "CF82770842",
+    "submission_url": "https://codeforces.com/contest/478/submission/82770842",
+    "tags": [
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Jun/07/2020 16:05"
+  },
   "CF82901288": {
     "contest_id": 1365,
     "language": "GNU C++14",
