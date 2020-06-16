@@ -561,6 +561,21 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF83922997": {
+    "contest_id": 1327,
+    "language": "GNU C++14",
+    "path": "codeforces\\1327\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Sum of Odd Integers",
+    "problem_url": "https://codeforces.com/contest/1327/problem/A",
+    "submission_id": "CF83922997",
+    "submission_url": "https://codeforces.com/contest/1327/submission/83922997",
+    "tags": [
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Jun/16/2020 18:18"
+  },
   "CF84038525": {
     "contest_id": 1367,
     "language": "GNU C++14",
