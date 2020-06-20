@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF84408593": {
+    "contest_id": 18,
+    "language": "GNU C++14",
+    "path": "codeforces\\18\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "Stripe",
+    "problem_url": "https://codeforces.com/contest/18/problem/C",
+    "submission_id": "CF84408593",
+    "submission_url": "https://codeforces.com/contest/18/submission/84408593",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Jun/20/2020 16:54"
+  },
   "CF84542070": {
     "contest_id": 1370,
     "language": "GNU C++14",
