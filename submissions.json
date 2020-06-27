@@ -561,6 +561,23 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF85201919": {
+    "contest_id": 765,
+    "language": "GNU C++14",
+    "path": "codeforces\\765\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Code obfuscation",
+    "problem_url": "https://codeforces.com/contest/765/problem/B",
+    "submission_id": "CF85201919",
+    "submission_url": "https://codeforces.com/contest/765/submission/85201919",
+    "tags": [
+      "greedy",
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Jun/27/2020 16:42"
+  },
   "CF85206785": {
     "contest_id": 350,
     "language": "GNU C++14",
