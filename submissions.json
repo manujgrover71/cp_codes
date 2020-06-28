@@ -561,6 +561,23 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF85358128": {
+    "contest_id": 1374,
+    "language": "GNU C++14",
+    "path": "codeforces\\1374\\D.cpp",
+    "problem_index": "D",
+    "problem_name": "Zero Remainder Array",
+    "problem_url": "https://codeforces.com/contest/1374/problem/D",
+    "submission_id": "CF85358128",
+    "submission_url": "https://codeforces.com/contest/1374/submission/85358128",
+    "tags": [
+      "math",
+      "sortings",
+      "two pointers",
+      "*1400"
+    ],
+    "timestamp": "Jun/28/2020 21:18"
+  },
   "CF85419526": {
     "contest_id": 1374,
     "language": "GNU C++14",
