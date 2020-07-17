@@ -561,6 +561,24 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF87040687": {
+    "contest_id": 1272,
+    "language": "GNU C++14",
+    "path": "codeforces\\1272\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Three Friends",
+    "problem_url": "https://codeforces.com/contest/1272/problem/A",
+    "submission_id": "CF87040687",
+    "submission_url": "https://codeforces.com/contest/1272/submission/87040687",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "sortings",
+      "*900"
+    ],
+    "timestamp": "Jul/17/2020 11:01"
+  },
   "CF87041285": {
     "contest_id": 1272,
     "language": "GNU C++14",
