@@ -35,28 +35,35 @@ void solve() {
     int a[n], b[m];
 
     map<int, int> mp;
+    set<int> st;
 
     for(int i = 0; i < n; i++){
         cin >> a[i];
-        if(!mp[a[i]]) {
+        if(!st.count(a[i])) {
+            st.insert(a[i]);
             mp[a[i]]++;
         }
     }
 
-    bool check = 1;
+    st.clear();
 
     for(int i = 0; i < m; i++) {
         cin >> b[i];
-        if(mp[b[i]] && check) {
-            cout << "YES\n";
-            cout << 1 << ' ' << b[i] << '\n';
-            check = 0;
+        if(!st.count(b[i])) {
+            st.insert(b[i]);
+            mp[b[i]]++;
         }
     }
 
-    if(check)
-        cout << "NO\n";
+    for(auto i : mp) {
+        if(i.second > 1) {
+            cout << "YES\n";
+            cout << 1 << ' ' << i.first << '\n';
+            return;
+        }
+    }
 
+    cout << "NO\n";
 }
 
 int main(){
