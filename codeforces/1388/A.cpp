@@ -18,6 +18,17 @@ using namespace std;
 #define vll vector<ll>
 #define pb push_back
 
+ll power(int x, unsigned int y){
+    ll res = 1;
+    while(y > 0){
+        if(y & 1) res = res * x;
+        y >>= 1;
+        x *= x;
+    }
+    return res;
+}
+
+
 
 void solve() {
     int n; cin >> n;
