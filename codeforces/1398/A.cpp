@@ -29,21 +29,31 @@ ll power(int x, unsigned int y){
 }
 
 void solve() {
-
-    int n; cin >> n;
-
-    ll a, b, c;
+    int n;
+    cin >> n;
+    vector<pair<ll, ll> > v;
 
     for(int i = 0; i < n; i++) {
-        if(!i) cin >> a;
-        else if(i == 1) cin >> b;
-        else cin >> c;
+        int t; cin >> t;
+        v.pb({t, i+1});
     }
 
-    if(c < a + b) {
-        cout << "-1\n";
-    }else cout << "1 2 " << n << '\n';
+    sort(all(v));
 
+    ll first = v[0].first;
+    ll second = v[1].first;
+    ll third = v[v.size()-1].first;
+
+    if(third >= first + second) {
+        vector<ll> ref;
+        ref.pb(v[0].second);        
+        ref.pb(v[1].second);        
+        ref.pb(v[v.size() - 1].second);        
+
+        sort(all(ref));
+
+        cout << ref[0] << ' ' << ref[1] << ' ' << ref[2] << '\n';
+    }else cout << "-1\n";
 }
 
 int main(){
