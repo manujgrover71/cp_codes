@@ -30,10 +30,6 @@ ll power(int x, unsigned int y){
 }
 
 
-bool isValid(int x, int len) {
-    return x >= 0 && x < len;
-} 
-
 // Check for number of Cases!!
 void solve() {
     string str; cin >> str;
@@ -60,9 +56,25 @@ void solve() {
 
     for(int i = 0; i < str.length(); i++) {
         if(str[i] == '1') {
-            if(isValid(i+x, str.length()) && ref[i+x] == '1') continue;
-            if(isValid(i-x, str.length()) && ref[i-x] == '1') continue;
-            check = false;
+            if(i-x >= 0 && i+x >= str.length() && ref[i-x] != '1') {
+                check = false;
+            }
+
+            if(i-x < 0 && i+x < str.length() && ref[i+x] != '1') {
+                check = false;
+            }
+
+            if(i-x >= 0 && i+x < str.length()) {
+                int cnt = 2;
+                if(ref[i-x] != '1') cnt--;
+                if(ref[i+x] != '1') cnt--;
+                if(!cnt) check = false;
+            }
+
+            if(i-x < 0 && i+x >= str.length()) {
+                check = false;
+            }
+
         }
     }
 
