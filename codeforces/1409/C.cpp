@@ -11,8 +11,8 @@
 
 using namespace std;
 
-#define all(x) (x).begin(),(x).end()
-#define rall(x) (x).rbegin(),(x).rend()
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
 #define ll long long
 #define mod 1000000007
 #define vi vector<int>
@@ -26,74 +26,86 @@ int dy[] = {0, 1, 0, -1};
 const int mx = 1e6 + 5;
 const int INF = mod;
 
-ll power(int x, unsigned int y){
+ll power(int x, unsigned int y)
+{
     ll res = 1;
-    while(y > 0){
-        if(y & 1) res = res * x;
+    while (y > 0)
+    {
+        if (y & 1)
+            res = res * x;
         y >>= 1;
         x *= x;
     }
     return res;
 }
 
-vector<int> getArr(ll size, ll start, ll dif) {
-
-    vector<int> arr(size);
-    arr[0] = start;
-    for(int i = 1; i < size; i++) {
-        arr[i] = arr[i-1] + dif;
-    }
-
-    return arr;
-
-}
-
 // Check for number of Cases!!
-void solve() {
-    ll size, x, y;
+void solve()
+{
+    int size, x, y;
+
     cin >> size >> x >> y;
+    ll ref = -1;
+    int next, s = x, last = INT_MAX;
+    for (int i = 1; i < x + 1; i++)
+    {
+        for(int j = 0; j < 19; j++) {
+            ref++;
+        }
 
-    vector<int> ans;
+        for (int j = 0; j < y - x + 1; j++)
+        {
 
-    ll last = INT_MAX;
+            int st = i, d = j;
+            vector<int> v;
+            int count = 0;
 
-    for(int i = 1; i <= 50; i++) {
-        for(int j = 1; j <= 50; j++) {
-            vector<int> arr = getArr(size, j, i);
-            bool isX = false, isY = false;
+            while (count < size)
+            {
+                v.push_back(st);
+                st += d;
+                count++;
+            }
 
-            isX = binary_search(all(arr), x);
-            isY = binary_search(all(arr), y);
-
-            if(isX && isY) {
-                if(last > arr[size-1]) {
-                    last = arr[size-1];
-                    ans = arr;
+            if (binary_search(v.begin(), v.end(), x) && binary_search(v.begin(), v.end(), y))
+            {
+                if (v.back() < last)
+                {
+                    next = j;
+                    s = i;
+                    last = v.back();
                 }
             }
         }
     }
 
-    for(auto i : ans) {
-        cout << i << ' ';
-    }
+    int count = 0;
 
-    cout << '\n';
+    while (count < size)
+    {
+        cout << s << " ";
+
+        s += next;
+        count++;
+    }
+    cout << "\n";
 }
 
-int main(){
+int main()
+{
 
-    #ifndef ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
     freopen("/ATOMCODES/input.txt", "r", stdin);
     freopen("/ATOMCODES/output.txt", "w", stdout);
-    #endif
+#endif
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
+
     int t = 1;
     cin >> t;
-    while(t--) {
-      solve();
+    while (t--)
+    {
+        solve();
     }
 }
