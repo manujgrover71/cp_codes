@@ -36,24 +36,43 @@ ll power(int x, unsigned int y){
     return res;
 }
 
-ll res(ll a, ll b, ll x, ll y, ll n) {
-    ll ab = a;
-    ll temp = max(x, a - n);
-    a = temp;
-    n -= (ab - temp);
-    if(n) {
-        b = max(y, b - n);
-    }
 
-    return a * b;
-}
 
 // Check for number of Cases!!
 void solve() {
     ll a, b, x, y, n;
     cin >> a >> b >> x >> y >> n;
 
-    cout << min(res(a, b, x, y, n), res(b, a, y, x, n)) << '\n';
+    ll ans = 0, ans2 = 0;
+
+    // if((a - x - n) >= (b-y - n)) {
+        ll ba = b;
+        ll tempA = max(y, b - n);
+        ll B = tempA;
+        ll N = n;
+        N -= (ba - tempA);
+        ll A = a;
+        if(N) {
+            A = max(x, A - N);
+        }
+        // cout << A << ' ' << B << '\n';
+        ans = A * B;
+    // }else {
+
+        ll ab = a;
+        ll temp = max(x, a - n);
+        a = temp;
+        n -= (ab - temp);
+
+        if(n) {
+            b = max(y, b - n);
+        }
+        // cout << a << ' ' << b << '\n';
+        // cout << a * b << '\n';
+        ans2 = a * b;
+    // }
+
+    cout << min(ans, ans2) << '\n';
 
 }
 
