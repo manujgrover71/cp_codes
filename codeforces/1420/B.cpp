@@ -43,32 +43,40 @@ ll power(ll x, ll y){
 }
 
 
+
 // Check for number of Cases!!
 void solve() {
-    ll n; cin >> n;
-    vector<ll> arr(n);
-    cin >> arr;
-    vector<ll> freq(35, 0);
+    ll num;
 
-    ll ans = 0;
+    cin >> num;
 
-    for(int i = 0; i < n; i++) {
-        ll count = 0;
-        while(arr[i] > 0) {
-            arr[i] >>= 1;
-            count++;
-        }
-        ans += freq[count]++;
+    vector<int> arr(num);
+
+    bool vis[num];
+    
+    int mx=0;
+    
+    for(int i = 0; i < num; i++){
+        cin >> arr[i];
+        vis[i]=0;
     }
+    
+    ll ans = num * (num - 1) / 2;
 
-    // int ans = 0;
-
-    // for(int i = 1; i < 35; i++) {
-    //     if(freq[i] >= 2)
-    //         ans += (1ll * freq[i] * (freq[i] - 1) / 2);
-    // }
-
-    cout << ans << '\n';
+    for(int i=31;i>=0;i--){
+        ll ref = 1ll<<i;
+        ll ones = 0,zeros =0;
+        for(int j = 0 ;j < num; j++){
+            if(vis[j])   continue;
+            if((arr[j] & ref)){
+                vis[j]=1;
+                ones++;
+            }
+            else    zeros++;
+        }
+        ans -= ones * zeros;
+    }
+    cout<<ans<<"\n";
 }
 
 int main(){
