@@ -58,13 +58,15 @@ void solve() {
             arr[i] >>= 1;
             count++;
         }
-        freq[count]++;
+        ans += freq[count]++;
     }
 
-    for(int i = 1; i < 35; i++) {
-        if(freq[i] >= 2)
-            ans += (1ll * freq[i] * (freq[i] - 1) / 2);
-    }
+    // int ans = 0;
+
+    // for(int i = 1; i < 35; i++) {
+    //     if(freq[i] >= 2)
+    //         ans += (1ll * freq[i] * (freq[i] - 1) / 2);
+    // }
 
     cout << ans << '\n';
 }
