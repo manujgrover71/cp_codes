@@ -43,7 +43,18 @@ ll power(ll x, ll y){
     return (res % nod);
 }
 
+bool check(vll& arr, double canAnswer, double total) {
 
+    ll n = arr.size() / 2;
+    if((canAnswer * n) + (2 * n * canAnswer) > total) return false;
+    for(int i = 0; i < n; i++) {
+        if(canAnswer > arr[i]) return false;
+    }
+    for(int i = n; i < 2 * n; i++) {
+        if(2 * canAnswer > arr[i]) return false;
+    }
+    return true;
+}
 
 // Check for number of Cases!!
 void solve() {
@@ -58,12 +69,14 @@ void solve() {
     ll boy_max = arr[(ll)n];
     ll girl_max = arr[0];
 
-    double left = 0, right = girl_max;
+    // double left = 0, right = girl_max;
 
-    double ans = 0;
+    // double ans = 0;
 
-    // while(left <= right) {
+    // ll iteration_count = 1e7;
+    double eps = -1e6;  
 
+    // for(int i = 0; i < iteration_count && left + eps < right; i++) {
     //     double mid = 0.5f * (left + right);
 
     //     double total = (mid * n) + (2 * n * mid);
@@ -77,27 +90,33 @@ void solve() {
     //     }
     // }
 
-    ll iteration_count = 1e5;
-    double eps = -1e6;
+    // double girls = ans * n;
+    // double boys = 2 * girls;
 
-    for(int i = 0; i < iteration_count && left + eps < right; i++) {
+    // cout.precision(6);
+
+    // cout << (girls + boys) << '\n';
+
+
+    double left = 0, right = 1e9;
+    double ans = 0;
+
+    for(int i = 0; i < 1000 && left + eps < right; i++) {
         double mid = 0.5f * (left + right);
 
-        double total = (mid * n) + (2 * n * mid);
-        double ref = mid * 2;
-
-        if((ref) <= boy_max && total <= w) { 
-            ans = mid;
+        if(check(arr, mid, w)) {
             left = mid;
-        }else {
-            right = mid;
-        }
+            ans = mid;
+        }else right = mid;
     }
+
+    // cout << ans << '\n';
 
     double girls = ans * n;
     double boys = 2 * girls;
 
-    cout << fixed << setprecision(10) << (girls + boys) << '\n';
+    cout << fixed << setprecision(10) << (girls + boys);
+    
 }
 
 int main(){
