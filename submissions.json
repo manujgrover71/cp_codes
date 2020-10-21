@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF96237325": {
+    "contest_id": 631,
+    "language": "GNU C++14",
+    "path": "codeforces\\631\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Print Check",
+    "problem_url": "https://codeforces.com/contest/631/problem/B",
+    "submission_id": "CF96237325",
+    "submission_url": "https://codeforces.com/contest/631/submission/96237325",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Oct/21/2020 17:03"
+  },
   "CF96414352": {
     "contest_id": 721,
     "language": "GNU C++14",
