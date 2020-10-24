@@ -561,6 +561,21 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF96527171": {
+    "contest_id": 1173,
+    "language": "GNU C++14",
+    "path": "codeforces\\1173\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Nauuo and Votes",
+    "problem_url": "https://codeforces.com/contest/1173/problem/A",
+    "submission_id": "CF96527171",
+    "submission_url": "https://codeforces.com/contest/1173/submission/96527171",
+    "tags": [
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Oct/24/2020 17:39"
+  },
   "CF96625478": {
     "contest_id": 1436,
     "language": "GNU C++14",
