@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF96847649": {
+    "contest_id": 583,
+    "language": "GNU C++14",
+    "path": "codeforces\\583\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "GCD Table",
+    "problem_url": "https://codeforces.com/contest/583/problem/C",
+    "submission_id": "CF96847649",
+    "submission_url": "https://codeforces.com/contest/583/submission/96847649",
+    "tags": [
+      "constructive algorithms",
+      "number theory",
+      "*1700"
+    ],
+    "timestamp": "Oct/27/2020 16:14"
+  },
   "CF96970471": {
     "contest_id": 1437,
     "language": "GNU C++14",
