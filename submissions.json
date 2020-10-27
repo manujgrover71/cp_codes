@@ -561,6 +561,21 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF96839905": {
+    "contest_id": 583,
+    "language": "GNU C++14",
+    "path": "codeforces\\583\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Asphalting Roads",
+    "problem_url": "https://codeforces.com/contest/583/problem/A",
+    "submission_id": "CF96839905",
+    "submission_url": "https://codeforces.com/contest/583/submission/96839905",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Oct/27/2020 14:17"
+  },
   "CF96840955": {
     "contest_id": 583,
     "language": "GNU C++14",
