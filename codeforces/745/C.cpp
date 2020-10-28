@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <unordered_set>
 #include <iostream>
 #include <climits>
 #include <iomanip>
@@ -65,31 +64,75 @@ ll power(ll x, ll y){
     return (res % nod);
 }
 
+vll adj[mx];
+map<ll, ll> gov;
+vll vis(mx,false);
 
-vll adj[mx], vis(mx, false);
-unordered_set<ll> gov;
-bool anyGov;
-ll el = 0;
+class DSU {
 
+    private:
+        vector<ll> parent;
+        vector<ll> sz;
+
+    public:
+
+        DSU(ll size) {
+            parent.resize(size+1);
+            sz.resize(size+1);
+
+            for(int i = 1; i <= size; i++) {
+                make_set(i);
+            }
+        }
+
+        ll getSize(ll x) {
+            ll p = this->find_parent(x);
+            return sz[this->find_parent(x)];
+        }
+
+        void setParentSize(ll x) {
+            sz[this->find_parent(x)] = 0;
+        }
+
+        void make_set(ll curr) {
+            parent[curr] = curr;
+            sz[curr] = 1;
+        }
+
+        ll find_parent(ll curr) {
+            return (parent[curr] == curr) ? curr : find_parent(parent[curr]);
+        }
+
+        void union_set(ll x, ll y) {
+            x = find_parent(x);
+            y = find_parent(y);
+
+            if(x != y) {
+                if(gov.find(x) != gov.end()) {
+                    sz[x] += sz[y];
+                    parent[y] = x;
+                }else {
+                    sz[y] += sz[x];
+                    parent[x] = y;
+                }
+            }
+        }
+};
 
 ll dfs(ll curr) {
+
     if(vis[curr]) return 0;
 
     vis[curr] = true;
 
-    el++;
-    if(gov.find(curr) != gov.end())
-        anyGov = true;
-
-    ll count = adj[curr].size();
+    ll size = adj[curr].size();
 
     for(auto child : adj[curr]) {
-        if(!vis[child]) {
-            count += dfs(child);
-        }
+        if(!vis[child])
+            size += dfs(child);
     }
 
-    return count;
+    return size;
 }
 
 // Check for number of Cases!!
@@ -97,42 +140,55 @@ void solve() {
     ll n, m, k;
     cin >> n >> m >> k;
 
-    while(k--) {
+    DSU dsu(n);
+
+    for(int i = 0; i < k; i++) {
         ll x; cin >> x;
-        gov.insert(x);
+        gov[x] = 0;
     }
 
     while(m--) {
         ll a, b;
         cin >> a >> b;
+
         adj[a].pb(b);
         adj[b].pb(a);
+        dsu.union_set(a, b);
     }
 
-    ll ans = 0;
-    ll maxSize = 0;
+    vll ref;
+
+    ll maxSize = 0, ans = 0;
+
     vll extras;
 
     for(int i = 1; i <= n; i++) {
-        el = 0;
-        anyGov = false;
-
-        ll vertexCount = dfs(i);
-        vertexCount /= 2;
-
-        ans += el * (el - 1) / 2 - vertexCount;
-        if(anyGov) maxSize = max(maxSize, el);
-        else extras.pb(el);
+        if(gov.find(dsu.find_parent(i)) != gov.end()) {
+            ll currSize = dsu.getSize(dsu.find_parent(i));
+            dsu.setParentSize(i);
+            ll totalSize = dfs(i);
+            totalSize /= 2;
+            ans += (currSize * (currSize - 1)) / 2 - totalSize;
+            if(currSize > maxSize) {
+                maxSize = currSize;
+            }
+        }else {
+            ll currSize = dsu.getSize(i);
+            ref.pb(currSize);
+            ll totalSize = dfs(i);
+            totalSize /= 2;
+            ans += currSize * (currSize - 1) / 2 - totalSize;
+            dsu.setParentSize(i);
+        }
     }
 
-    for(int i = 0; i < extras.size(); i++) {
-        ans += extras[i] * maxSize;
-        maxSize += extras[i];
+    for(int i = 0; i < ref.size(); i++) {
+        ans += ref[i] * maxSize;
+        maxSize += ref[i];
     }
 
     cout << ans;
-
-}
+}   
 
 int main(){
 
