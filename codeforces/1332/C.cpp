@@ -65,10 +65,52 @@ ll power(ll x, ll y){
     return (res % nod);
 }
 
+class DSU {
+
+    private:
+        vector<ll> parent;
+        vector<ll> sz;
+
+    public:
+
+        DSU(ll size) {
+            parent.resize(size+1);
+            sz.resize(size+1);
+
+            for(int i = 1; i <= size; i++) {
+                make_set(i);
+            }
+        }
+
+        void make_set(ll curr) {
+            parent[curr] = curr;
+            sz[curr] = 1;
+        }
+
+        ll find_parent(ll curr) {
+            return (parent[curr] == curr) ? curr : find_parent(parent[curr]);
+        }
+
+        void union_set(ll x, ll y) {
+            x = find_parent(x);
+            y = find_parent(y);
+
+            if(x != y) {
+                if(sz[x] < sz[y])
+                    swap(x, y);
+
+                parent[y] = x;
+                sz[x] += sz[y];
+            }
+        }
+};
+
 // Check for number of Cases!!
 void solve() {
     ll n, k;
     cin >> n >> k;
+
+    DSU dsu(n);
 
     string str; cin >> str;
 
@@ -77,20 +119,21 @@ void solve() {
     for(int i = 0; i < n; i++) {
         if(!vis[i]) {
             for(int j = i; j < n; j += k) {
-                vis[j] = min(i+1, j+1);
+                dsu.union_set(i, j);
+                vis[j] = true;
             }
         }
     }
 
     for(int i = 0, j = n-1; i < j; i++, j--) {
-        vis[i] = vis[j] = min(vis[i], vis[j]);
+        dsu.union_set(i, j);
     }
 
     vector<vector<ll>> freq(n + 1, vector<ll> (26, 0));
     vector<pair<ll, ll>> ref(n, {0, 0});
 
     for(int i = 0; i < n; i++) {
-        ll x = vis[i];
+        ll x = dsu.find_parent(i);
         freq[x][str[i] - 'a']++;
         ll currMax = max(ref[x].first, freq[x][str[i]-'a']);
         ll newSize = ref[x].second + 1;
