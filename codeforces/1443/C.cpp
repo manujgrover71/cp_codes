@@ -87,14 +87,19 @@ void solve() {
 
     ll ans = ref[0].first;
 
-    ref.pb({-1, -1});
+    ll sum = ref[0].second;
 
-    ll sum = 0;
-
-    for(int i = 1; i <= n; i++) {
-        sum += ref[i-1].second;
-        ans = min(ans, max(sum, ref[i].first));
+    for(int i = 1; i < n; i++) {
+        if(sum <= ref[i].first) {
+            ans = min(ans, ref[i].first);
+            sum += ref[i].second;
+        }else {
+            ans = min(ans, sum);
+            break;
+        }
     }
+
+    ans = min(ans, sum);
 
     cout << ans << '\n';
 }
