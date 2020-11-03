@@ -72,17 +72,15 @@ void solve() {
 	vll arr(n);
 	cin >> arr;
 
-	vll prefix(n+1, 0);
-
-	for(int i = 0; i < n-1; i++) {
-		if(arr[i] < arr[i+1]) {
-			prefix[i+1] -= (arr[i+1] - arr[i]);
-		}
-	}
+	ll ref = arr[0];
+	arr[0] = 0;
 
 	for(int i = 1; i < n; i++) {
-		prefix[i] += prefix[i-1];
-		if(prefix[i] + arr[i] < 0) {
+		if(arr[i] >= arr[i-1]) {
+			ll diff = arr[i] - arr[i-1];
+			ref = min(ref, diff);
+			arr[i] -= ref;
+		}else {
 			cout << "NO\n";
 			return;
 		}
@@ -105,6 +103,6 @@ int main(){
 	int t = 1;
 	cin >> t;
 	while(t--) {
-	  solve();
+	solve();
 	}
 }
