@@ -561,6 +561,22 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF98526864": {
+    "contest_id": 1438,
+    "language": "GNU C++14",
+    "path": "codeforces\\1438\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Specific Tastes of Andre ",
+    "problem_url": "https://codeforces.com/contest/1438/problem/A",
+    "submission_id": "CF98526864",
+    "submission_url": "https://codeforces.com/contest/1438/submission/98526864",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Nov/16/2020 12:59"
+  },
   "CF98527087": {
     "contest_id": 1438,
     "language": "GNU C++14",
