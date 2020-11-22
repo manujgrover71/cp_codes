@@ -561,6 +561,25 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF99218755": {
+    "contest_id": 1451,
+    "language": "GNU C++14",
+    "path": "codeforces\\1451\\C.cpp",
+    "problem_index": "C",
+    "problem_name": "String Equality",
+    "problem_url": "https://codeforces.com/contest/1451/problem/C",
+    "submission_id": "CF99218755",
+    "submission_url": "https://codeforces.com/contest/1451/submission/99218755",
+    "tags": [
+      "dp",
+      "greedy",
+      "hashing",
+      "implementation",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Nov/22/2020 11:04"
+  },
   "CF99218771": {
     "contest_id": 1451,
     "language": "GNU C++14",
