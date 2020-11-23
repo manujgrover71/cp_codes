@@ -561,6 +561,23 @@
     ],
     "timestamp": "Dec/20/2020 21:54"
   },
+  "CF99316274": {
+    "contest_id": 822,
+    "language": "GNU C++14",
+    "path": "codeforces\\822\\B.cpp",
+    "problem_index": "B",
+    "problem_name": "Crossword solving",
+    "problem_url": "https://codeforces.com/contest/822/problem/B",
+    "submission_id": "CF99316274",
+    "submission_url": "https://codeforces.com/contest/822/submission/99316274",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*1000"
+    ],
+    "timestamp": "Nov/23/2020 17:07"
+  },
   "CF99321508": {
     "contest_id": 822,
     "language": "GNU C++14",
