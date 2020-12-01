@@ -1,4 +1,21 @@
 {
+  "CF100099648": {
+    "contest_id": 1385,
+    "language": "GNU C++14",
+    "path": "codeforces\\1385\\E.cpp",
+    "problem_index": "E",
+    "problem_name": "Directing Edges",
+    "problem_url": "https://codeforces.com/contest/1385/problem/E",
+    "submission_id": "CF100099648",
+    "submission_url": "https://codeforces.com/contest/1385/submission/100099648",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "*2000"
+    ],
+    "timestamp": "Dec/01/2020 15:11"
+  },
   "CF100185698": {
     "contest_id": 1206,
     "language": "GNU C++14",
