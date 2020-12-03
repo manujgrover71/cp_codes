@@ -1,4 +1,20 @@
 {
+  "CF100257563": {
+    "contest_id": 1150,
+    "language": "GNU C++14",
+    "path": "codeforces\\1150\\A.cpp",
+    "problem_index": "A",
+    "problem_name": "Stock Arbitraging",
+    "problem_url": "https://codeforces.com/contest/1150/problem/A",
+    "submission_id": "CF100257563",
+    "submission_url": "https://codeforces.com/contest/1150/submission/100257563",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Dec/03/2020 15:13"
+  },
   "CF100257992": {
     "contest_id": 1150,
     "language": "GNU C++14",
