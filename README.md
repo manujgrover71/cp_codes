@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-492 | [E - Sereja and Brackets](https://codeforces.com/contest/381/problem/E) | [GNU C++14](./codeforces/381/E.cpp) | `data structures` `*2000` | Dec/24/2020 14:11 | 
+493 | [E - Sereja and Brackets](https://codeforces.com/contest/381/problem/E) | [GNU C++14](./codeforces/381/E.cpp) | `data structures` `*2000` | Dec/24/2020 14:11 | 
+492 | [E - Enemy is weak](https://codeforces.com/contest/61/problem/E) | [GNU C++14](./codeforces/61/E.cpp) | `data structures` `trees` `*1900` | Dec/23/2020 21:25 | 
 491 | [C - Peaceful Rooks](https://codeforces.com/contest/1465/problem/C) | [GNU C++14](./codeforces/1465/C.cpp) | `dfs and similar` `dsu` `greedy` `implementation` | Dec/20/2020 21:54 | 
 490 | [B - Fair Numbers](https://codeforces.com/contest/1465/problem/B) | [GNU C++14](./codeforces/1465/B.cpp) | `brute force` `number theory` | Dec/20/2020 21:08 | 
 489 | [A - In-game Chat](https://codeforces.com/contest/1465/problem/A) | [GNU C++14](./codeforces/1465/A.cpp) | `implementation` | Dec/20/2020 20:38 | 
