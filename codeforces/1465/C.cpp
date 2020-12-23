@@ -43,43 +43,69 @@ ll power(ll x, ll y){
     return (res % nod);
 }
 
+class DSU {
+
+    private:
+        vector<ll> parent;
+        vector<ll> sz;
+
+    public:
+
+        DSU(ll size) {
+            parent.resize(size+1);
+            sz.resize(size+1);
+
+            for(int i = 1; i <= size; i++) {
+                make_set(i);
+            }
+        }
+
+        void make_set(ll curr) {
+            parent[curr] = curr;
+            sz[curr] = 1;
+        }
+
+        ll find_parent(ll curr) {
+            return (parent[curr] == curr) ? curr : find_parent(parent[curr]);
+        }
+
+        bool union_set(ll x, ll y) {
+            x = find_parent(x);
+            y = find_parent(y);
+
+            if(x != y) {
+                if(sz[x] < sz[y])
+                    swap(x, y);
+
+                parent[y] = x;
+                sz[x] += sz[y];
+                return true;
+            }
+            
+            return false;
+        }
+};
 
 // Check for number of Cases!!
 void solve() {
-    ll n,m;
-    cin>>n>>m;
+    ll n, x;
+    cin >> n >> x;
     
-    vector<pair<int, int>> ref(n + 1, {-1, -1});
-    
-    for(int i = 0; i < m; i++){
-        ll a, b;
-        cin >> a >> b;
-        if(a != b) {
-            ref[a] = {a, b};
-        }
-    }
+    DSU dsu(n+1);
     
     ll ans = 0;
     
-    for(int i = 1; i <= n; i++) {
-        if(ref[i].first != -1) {
-            int f = ref[i].first;
-            ll sz = 1;
-            ll temp = ref[i].second;
-            ref[i].first = -1;
-            while(temp != f) {
-                if(ref[temp].first == -1) break;
-                sz++;
-                ref[temp].first = -1;
-                temp = ref[temp].second;
-            }
-            if(temp == f) ans += sz + 1;
-            else ans += sz;
-        }
+    for(int i = 0; i < x; i++) {
+       ll a, b;
+       cin >> a >> b;
+       
+       if(a == b) continue;
+       
+       ans++;
+       if(!dsu.union_set(a, b)) ans++;
     }
     
     cout << ans << '\n';
-    
 }
 
 int main(){
